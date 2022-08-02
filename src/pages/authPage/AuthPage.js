@@ -13,6 +13,9 @@ function AuthPage() {
 
   return (
     <div className={classes.main_container}>
+      <div className={classes.info}>
+        <h2 className={classes.title}>Tech Reddit</h2>
+      </div>
       <form className={classes.form}>
         <span className={classes.title}>{isLogin ? "Login" : "Sign Up"}</span>
         <div className={classes.email_container}>
