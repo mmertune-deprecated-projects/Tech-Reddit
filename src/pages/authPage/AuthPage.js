@@ -1,4 +1,5 @@
 import { React, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import classes from "./AuthPage.module.css";
 
@@ -7,8 +8,14 @@ function AuthPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const navigate = useNavigate();
+
   const submitHandler = (e) => {
     e.preventDefault();
+
+    //Logic for if sign in  or sign up, for now anything will sign in
+
+    navigate("/home", { replace: true });
     return;
   };
 
@@ -34,17 +41,25 @@ function AuthPage() {
             type="text"
             onChange={(e) => setEmail(e.target.value)}
             value={email}
-            placeholder="Email or Username"
           />
+          <label
+            className={` ${classes.label} ${email && classes.input_focused}`}
+          >
+            Email or Username
+          </label>
         </div>
-        <div className={classes.email_container}>
+        <div className={classes.text_container}>
           <input
             className={classes.text_input}
             type="password"
             onChange={(e) => setPassword(e.target.value)}
             value={password}
-            placeholder="Password"
           />
+          <label
+            className={` ${classes.label} ${password && classes.input_focused}`}
+          >
+            Password
+          </label>
         </div>
         <button
           className={`btn ${classes.btn_submit} ${

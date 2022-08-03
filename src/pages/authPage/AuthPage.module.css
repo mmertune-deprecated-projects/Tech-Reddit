@@ -38,6 +38,17 @@
   font-size: 3rem;
 }
 
+.text_container {
+  position: relative;
+}
+
+.label {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s ease-in;
+}
 .text_input {
   font-size: 1.8rem;
   padding: 1rem;
@@ -46,6 +57,13 @@
   width: 40rem;
   height: 6rem;
 }
+
+.text_input:focus + .label,
+.input_focused {
+  font-size: 1.4rem;
+  transform: translateY(-170%);
+}
+
 .btn_submit,
 .btn_toggle {
   font-size: 2.5rem;
@@ -57,7 +75,6 @@
 
 .btn_toggle {
   color: #fff;
-
   width: 20rem;
   background-color: var(--color-primary);
 }
