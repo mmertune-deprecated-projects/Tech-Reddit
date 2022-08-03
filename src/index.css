@@ -1,9 +1,9 @@
 /* css vars for commonly used colors, shadows etc */
 
 :root {
-  --primary-color: blue;
-  --primary-color-light: blue;
-  --primary-color-dark: blue;
+  --color-primary: red;
+  --color-primary-light: red;
+  --color-primary-dark: red;
   --color-grey-light-1: #faf9f9;
   --color-grey-light-2: #f4f2f2;
   --color-grey-light-3: #f0eeee;
@@ -22,6 +22,28 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Helvetica, Arial, sans-serif;
+}
+html {
   font-size: 62.5%;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+  background-color: var(--color-grey-light-2);
+}
+
+.btn {
+  font-family: inherit;
+  border: none;
+  border-radius: 6px;
+  font-size: 17px;
+  line-height: 48px;
+  padding: 0 16px;
+  cursor: pointer;
+}
+
+.btn_valid {
+  color: #fff;
+  background-color: green;
 }
