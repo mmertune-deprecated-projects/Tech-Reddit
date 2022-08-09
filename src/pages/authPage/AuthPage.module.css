@@ -7,7 +7,6 @@
 --soft-white: #f5f5f5; 
 */
 
-
 .main_container {
   display: grid;
   width: 100%;
@@ -19,7 +18,7 @@
     ".  title  ."
     ".  form   ."
     ".  .....  .";
-    background-color: var(--dark-blue);
+  background-color: var(--dark-blue);
 }
 .title {
   grid-area: title;
@@ -35,27 +34,35 @@
   margin: 0 auto;
   padding: 20px;
   background-color: var(--dark-navy);
+  border: solid var(--dark-grey) 1px;
+  border-radius: 5px;
 }
 .email_container {
   margin-bottom: 10px;
 }
-.label{
+.label {
   color: var(--soft-white);
 }
 .email_container input {
   width: 100%;
   height: 1.7rem;
+  color: var(--soft-white);
   background-color: var(--dark-blue);
+  border: solid var(--dark-grey) 1px;
+  border-radius: 5px;
   margin-top: 10px;
+  padding: 0 10px;
 }
 .toggler {
   margin-top: 10px;
   height: 1.7rem;
-  border: solid black 1px;
-  background-color: var(--cool-blue);
+  background-color: var(--cool-blue-opaque);
   color: var(--soft-white);
+  border: none;
+  cursor: pointer;
 }
+.toggler:hover {
+background-color: var(--cool-blue);}
 .box_curve {
   border-radius: 5px;
-  border: solid var(--dark-grey) 1px;
 }
