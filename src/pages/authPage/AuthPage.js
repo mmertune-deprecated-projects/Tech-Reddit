@@ -33,7 +33,7 @@ function AuthPage() {
         </div>
       </form>
       <button className={classes.toggler} onClick={toggleHandler}>
-        {!isLogin ? "Login" : "Sign Up"}
+        {isLogin ? "Login" : "Sign Up"}
       </button>
     </div>
   );
