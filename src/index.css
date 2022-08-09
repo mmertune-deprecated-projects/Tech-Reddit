@@ -1,4 +1,12 @@
-/* * {
+:root {
+  --dark-blue: #0d1117;
+  --dark-navy: #161b22;
+  --dark-grey: #30363d;
+  --light-purple: #6e5494;
+  --cool-blue: #255088;
+  --soft-white: #f5f5f5;
+}
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -14,4 +22,4 @@ body {
 #root {
   width: 100%;
   height: 100%;
-} */
+}
