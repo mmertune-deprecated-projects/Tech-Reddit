@@ -1,17 +1,14 @@
-import { useEffect, useState } from "react";
+import { React, useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+
 import classes from "./AuthPage.module.css";
 
 function AuthPage() {
-  const linkProp = useLocation();
-
   const [isLogin, setIsLogin] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const toggleHandler = () => {
-    setIsLogin(!isLogin);
-  };
+  const linkProp = useLocation();
 
   // Uses prop from Link on Homepage to change AuthPage
   useEffect(() => {
@@ -20,38 +17,62 @@ function AuthPage() {
     }
   }, []);
 
+  const submitHandler = (e) => {
+    e.preventDefault();
+    return;
+  };
+
+  const toggleHandler = () => {
+    setIsLogin(!isLogin);
+  };
+
   return (
     <div className={classes.main_container}>
-      <h1 className={classes.title}>{isLogin ? "Login" : "Sign Up"}</h1>
-      <form className={`${classes.form} ${classes.box_curve}`}>
-        <div className={classes.email_container}>
-          <label className={classes.label}>Email</label>
+      <div className={classes.info}>
+        <h2 className={classes.title}>Logo or Title</h2>
+        <p className={classes.description}>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus nisi
+          odio praesentium aperiam asperiores fuga. Iure, autem ullam rem nisi
+          perferendis.
+        </p>
+      </div>
+      <form className={classes.form}>
+        <span className={classes.header}>{isLogin ? "Login" : "Sign Up"}</span>
+        <div className={classes.text_container}>
           <input
-            className={`${classes.box_curve}`}
-            type="email"
+            className={classes.text_input}
+            type="text"
             onChange={(e) => setEmail(e.target.value)}
             value={email}
+            placeholder="Email or Username"
           />
         </div>
         <div className={classes.email_container}>
-          <label className={classes.label}>Password</label>
           <input
-            className={`${classes.box_curve}`}
+            className={classes.text_input}
             type="password"
             onChange={(e) => setPassword(e.target.value)}
             value={password}
+            placeholder="Password"
           />
-        </div>{" "}
+        </div>
         <button
-          className={`${classes.toggler} ${classes.box_curve}`}
-          onClick={toggleHandler}
+          className={`btn ${classes.btn_submit} ${
+            //minor input check validation, needs more
+            email && password && "btn_valid"
+          }`}
+          onClick={submitHandler}
         >
-          {isLogin ? "Login" : "Sign Up"}
+          Submit
         </button>
+
+        <input
+          className={`btn ${classes.btn_toggle}`}
+          type="button"
+          value={!isLogin ? "Login" : "Sign Up"}
+          onClick={toggleHandler}
+        />
       </form>
-      <button className={classes.toggler} onClick={toggleHandler}>
-        {isLogin ? "Login" : "Sign Up"}
-      </button>
     </div>
   );
 }
