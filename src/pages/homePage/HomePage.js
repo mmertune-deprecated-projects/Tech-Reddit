@@ -1,9 +1,12 @@
-import React from "react";
+import React from 'react'
+import Nav from '../../components/Nav'
 
-import classes from "./HomePage.module.css";
-
-function HomePage() {
-  return <div>HomePage</div>;
+const Homepage = () => {
+  return (
+    <div>
+      homepage
+    </div>
+  )
 }
 
-export default HomePage;
+export default Homepage
