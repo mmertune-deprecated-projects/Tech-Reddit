@@ -1,8 +1,10 @@
-import { React, useState } from "react";
-
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import classes from "./AuthPage.module.css";
 
 function AuthPage() {
+  const linkProp = useLocation();
+
   const [isLogin, setIsLogin] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -10,6 +12,13 @@ function AuthPage() {
   const toggleHandler = () => {
     setIsLogin(!isLogin);
   };
+
+  // Uses prop from Link on Homepage to change AuthPage
+  useEffect(() => {
+    if (linkProp.state) {
+      setIsLogin(linkProp.state.isLogin);
+    }
+  }, []);
 
   return (
     <div className={classes.main_container}>
@@ -33,7 +42,7 @@ function AuthPage() {
         </div>
       </form>
       <button className={classes.toggler} onClick={toggleHandler}>
-        {!isLogin ? "Login" : "Sign Up"}
+        {isLogin ? "Login" : "Sign Up"}
       </button>
     </div>
   );
