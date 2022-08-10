@@ -1,49 +1,26 @@
-/* css vars for commonly used colors, shadows etc */
-
 :root {
-  --color-primary: red;
-  --color-primary-light: red;
-  --color-primary-dark: red;
-  --color-grey-light-1: #faf9f9;
-  --color-grey-light-2: #f4f2f2;
-  --color-grey-light-3: #f0eeee;
-  --color-grey-light-4: #ccc;
-  --color-grey-dark-1: #333;
-  --color-grey-dark-2: #777;
-  --color-grey-dark-3: #999;
-  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
-  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
-  --line: 1px solid var(--color-grey-light-2);
+  --dark-blue: #0d1117;
+  --dark-navy: #161b22;
+  --dark-grey: #30363d;
+  --light-purple: #6e5494;
+  --cool-blue: rgb(37, 80, 136);
+  --cool-blue-opaque:rgb(37, 80, 136, 0.6);
+  --soft-white: #f5f5f5;
 }
-
-*,
-*::before,
-*::after {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 html {
-  font-size: 62.5%;
+  width: 100vw;
+  height: 100vh;
 }
-
 body {
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 1.6rem;
-  background-color: var(--color-grey-light-2);
+  width: 100%;
+  height: 100%;
 }
-
-.btn {
-  font-family: inherit;
-  border: none;
-  border-radius: 6px;
-  font-size: 17px;
-  line-height: 48px;
-  padding: 0 16px;
-  cursor: pointer;
-}
-
-.btn_valid {
-  color: #fff;
-  background-color: green;
+#root {
+  width: 100%;
+  height: 100%;
 }

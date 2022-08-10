@@ -1,82 +1,57 @@
-import { React, useState } from "react";
-import { useNavigate } from "react-router-dom";
-
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import classes from "./AuthPage.module.css";
 
 function AuthPage() {
+  const linkProp = useLocation();
+
   const [isLogin, setIsLogin] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
-  const navigate = useNavigate();
-
-  const submitHandler = (e) => {
-    e.preventDefault();
-
-    //Logic for if sign in  or sign up, for now anything will sign in
-
-    navigate("/home", { replace: true });
-    return;
-  };
 
   const toggleHandler = () => {
     setIsLogin(!isLogin);
   };
 
+  // Uses prop from Link on Homepage to change AuthPage
+  useEffect(() => {
+    if (linkProp.state) {
+      setIsLogin(linkProp.state.isLogin);
+    }
+  }, []);
+
   return (
     <div className={classes.main_container}>
-      <div className={classes.info}>
-        <h2 className={classes.title}>Logo or Title</h2>
-        <p className={classes.description}>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus nisi
-          odio praesentium aperiam asperiores fuga. Iure, autem ullam rem nisi
-          perferendis.
-        </p>
-      </div>
-      <form className={classes.form}>
-        <span className={classes.header}>{isLogin ? "Login" : "Sign Up"}</span>
-        <div className={classes.text_container}>
+      <h1 className={classes.title}>{isLogin ? "Login" : "Sign Up"}</h1>
+      <form className={`${classes.form} ${classes.box_curve}`}>
+        <div className={classes.email_container}>
+          <label className={classes.label}>Email</label>
           <input
-            className={classes.text_input}
-            type="text"
+            className={`${classes.box_curve}`}
+            type="email"
             onChange={(e) => setEmail(e.target.value)}
             value={email}
           />
-          <label
-            className={` ${classes.label} ${email && classes.input_focused}`}
-          >
-            Email or Username
-          </label>
         </div>
-        <div className={classes.text_container}>
+        <div className={classes.email_container}>
+          <label className={classes.label}>Password</label>
           <input
-            className={classes.text_input}
+            className={`${classes.box_curve}`}
             type="password"
             onChange={(e) => setPassword(e.target.value)}
             value={password}
           />
-          <label
-            className={` ${classes.label} ${password && classes.input_focused}`}
-          >
-            Password
-          </label>
-        </div>
+        </div>{" "}
         <button
-          className={`btn ${classes.btn_submit} ${
-            email && password && "btn_valid"
-          }`}
-          onClick={submitHandler}
-        >
-          Submit
-        </button>
-
-        <input
-          className={`btn ${classes.btn_toggle}`}
-          type="button"
-          value={!isLogin ? "Login" : "Sign Up"}
+          className={`${classes.toggler} ${classes.box_curve}`}
           onClick={toggleHandler}
-        />
+        >
+          {isLogin ? "Login" : "Sign Up"}
+        </button>
       </form>
+      <button className={classes.toggler} onClick={toggleHandler}>
+        {isLogin ? "Login" : "Sign Up"}
+      </button>
     </div>
   );
 }
