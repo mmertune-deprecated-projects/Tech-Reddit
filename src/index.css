@@ -1,13 +1,25 @@
 :root {
   --dark-blue: #0d1117;
   --dark-navy: #161b22;
-  --dark-grey: #30363d;
   --light-purple: #6e5494;
   --cool-blue: rgb(37, 80, 136);
-  --cool-blue-opaque:rgb(37, 80, 136, 0.6);
+  --cool-blue-opaque: rgba(37, 80, 136, 0.6);
   --soft-white: #f5f5f5;
+  --grey-light-1: #faf9f9;
+  --grey-light-2: #f4f2f2;
+  --grey-light-3: #f0eeee;
+  --grey-light-4: #ccc;
+  --grey-dark-1: #333;
+  --grey-dark-2: #777;
+  --grey-dark-3: #999;
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+  --line: 1px solid var(--color-grey-light-2);
 }
-* {
+
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -15,12 +27,32 @@
 html {
   width: 100vw;
   height: 100vh;
+  font-size: 62.5%;
 }
 body {
   width: 100%;
   height: 100%;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+  background-color: var(--grey-light-2);
 }
+
 #root {
   width: 100%;
   height: 100%;
+}
+
+.btn {
+  font-family: inherit;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.7rem;
+  line-height: 4.8rem;
+  padding: 0 1.6rem;
+  cursor: pointer;
+}
+
+.btn_valid {
+  color: #fff;
+  background-color: var(--cool-blue);
 }
