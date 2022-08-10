@@ -22,11 +22,12 @@ function AuthPage() {
 
   return (
     <div className={classes.main_container}>
-      <form className={classes.form}>
-        <span className={classes.title}>{isLogin ? "Login" : "Sign Up"}</span>
+      <h1 className={classes.title}>{isLogin ? "Login" : "Sign Up"}</h1>
+      <form className={`${classes.form} ${classes.box_curve}`}>
         <div className={classes.email_container}>
           <label className={classes.label}>Email</label>
           <input
+            className={`${classes.box_curve}`}
             type="email"
             onChange={(e) => setEmail(e.target.value)}
             value={email}
@@ -35,11 +36,18 @@ function AuthPage() {
         <div className={classes.email_container}>
           <label className={classes.label}>Password</label>
           <input
+            className={`${classes.box_curve}`}
             type="password"
             onChange={(e) => setPassword(e.target.value)}
             value={password}
           />
-        </div>
+        </div>{" "}
+        <button
+          className={`${classes.toggler} ${classes.box_curve}`}
+          onClick={toggleHandler}
+        >
+          {isLogin ? "Login" : "Sign Up"}
+        </button>
       </form>
       <button className={classes.toggler} onClick={toggleHandler}>
         {isLogin ? "Login" : "Sign Up"}

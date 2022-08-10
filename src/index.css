@@ -1,0 +1,26 @@
+:root {
+  --dark-blue: #0d1117;
+  --dark-navy: #161b22;
+  --dark-grey: #30363d;
+  --light-purple: #6e5494;
+  --cool-blue: rgb(37, 80, 136);
+  --cool-blue-opaque:rgb(37, 80, 136, 0.6);
+  --soft-white: #f5f5f5;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  width: 100vw;
+  height: 100vh;
+}
+body {
+  width: 100%;
+  height: 100%;
+}
+#root {
+  width: 100%;
+  height: 100%;
+}
