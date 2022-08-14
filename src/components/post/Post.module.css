@@ -1,0 +1,67 @@
+.post_container {
+  display: flex;
+  flex-direction: column;
+  height: 18rem;
+  background-color: var(--grey-light-1);
+  padding: 1rem;
+  border-radius: 5px;
+  /* box-shadow: var(--shadow-light); */
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.post_container:hover {
+  transform: scale(1.03);
+}
+
+.mini_icon {
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+}
+
+.main_heading {
+  font-size: 2rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--grey-dark-1);
+}
+
+.main_heading:hover {
+  text-decoration: underline;
+}
+
+.date {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--grey-dark-1);
+}
+
+.info_wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.like_button,
+.dislike_button {
+  color: transparent;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  text-shadow: 0 0 0 var(--grey-light-4);
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.selected {
+  text-shadow: 0 0 0 var(--light-purple);
+}
+
+.community:visited {
+  color: inherit;
+}
+
+.underline {
+  border-bottom: var(--line);
+}

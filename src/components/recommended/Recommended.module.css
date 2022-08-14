@@ -1,0 +1,29 @@
+.container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.links_list {
+  list-style: none;
+  margin-top: 4rem;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.link img {
+  width: 5rem;
+}
+
+.link a {
+  margin-left: 1.2rem;
+  text-decoration: none;
+  color: var(--grey-dark-1);
+}
+
+.link a:hover {
+  text-decoration: underline;
+}

@@ -17,12 +17,20 @@
 .posts_container {
   grid-area: posts;
   margin: 8rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  padding: 1rem;
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 20px;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .recommended_container {
   background-color: var(--grey-light-1);
   grid-area: recommended;
+}
+
+.posts_container::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
 }
