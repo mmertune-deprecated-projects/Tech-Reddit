@@ -4,7 +4,7 @@
   display: grid;
   grid-template-areas:
     "nav nav"
-    "posts recommended";
+    "posts side";
   grid-template-columns: 1fr 28rem;
   grid-template-rows: 10rem 1fr;
 }
@@ -26,9 +26,10 @@
   overflow-x: hidden;
 }
 
-.recommended_container {
+.side_container {
   background-color: var(--grey-light-1);
-  grid-area: recommended;
+  overflow-y: scroll;
+  grid-area: side;
 }
 
 .posts_container::-webkit-scrollbar {

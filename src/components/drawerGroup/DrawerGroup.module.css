@@ -1,6 +1,7 @@
 .container {
   text-align: center;
   padding: 2rem;
+  border-bottom: 1px dashed var(--grey-dark-2);
 }
 
 .links_list {

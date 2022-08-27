@@ -1,29 +1,29 @@
 import { React, useState } from "react";
 import Nav from "../../components/Nav";
 import Post from "../../components/post/Post";
-import Recommended from "../../components/recommended/Recommended";
+import DrawerGroup from "../../components/drawerGroup/DrawerGroup";
 
 import classes from "./HomePage.module.css";
 
 const Homepage = (props) => {
   //SAMPLE OBJ MODEL
-  // const obj = {
-  //   img: "https://media.makeameme.org/created/shitty-memes-shitty-z83h9t.jpg",
-  //   title: "Post Title",
-  //   date: "02-05-2000",
-  //   like: true,
-  //   community: "metal",
-  // };
+  const obj = {
+    img: "https://media.makeameme.org/created/shitty-memes-shitty-z83h9t.jpg",
+    title: "Post Title",
+    date: "02-05-2000",
+    like: true,
+    community: "metal",
+  };
 
-  // const obj1 = {
-  //   text: "The substring() method returns the part of the string between the start and end indexes, or to the end of the string.The substring() method returns the part of the string between the start and end indexes, or to the end of the string.",
-  //   title: "Post Title2",
-  //   date: "02-05-2000",
-  //   like: true,
-  //   community: "text",
-  // };
+  const obj1 = {
+    text: "The substring() method returns the part of the string between the start and end indexes, or to the end of the string.The substring() method returns the part of the string between the start and end indexes, or to the end of the string.",
+    title: "Post Title2",
+    date: "02-05-2000",
+    like: true,
+    community: "text",
+  };
 
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState([obj1, obj1, obj1, obj]);
 
   return (
     <div className={classes.home_container}>
@@ -44,8 +44,20 @@ const Homepage = (props) => {
           />
         ))}
       </div>
-      <div className={classes.recommended_container}>
-        <Recommended />
+      <div className={classes.side_container}>
+        {/* list should be retrieved from db */}
+        <DrawerGroup
+          cat="Recommended"
+          list={["memes", "hardware", "software", "education", "salaries"]}
+        />
+        <DrawerGroup
+          cat="SubbedTo"
+          list={["SubbedTo1", "SubbedTo2", "SubbedTo3"]}
+        />
+        <DrawerGroup
+          cat="Popular "
+          list={["SubbedTo1", "SubbedTo2", "SubbedTo3"]}
+        />
       </div>
     </div>
   );
