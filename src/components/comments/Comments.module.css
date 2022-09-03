@@ -1,0 +1,17 @@
+.container {
+  width: calc(100% - 1.5rem);
+  margin: 0.6rem 1.5rem;
+}
+
+.comment__container {
+  position: relative;
+}
+
+.comment__container::before {
+  content: "";
+  background-color: rgb(170, 170, 170);
+  position: absolute;
+  min-height: 100%;
+  width: 1px;
+  left: -1rem;
+}
