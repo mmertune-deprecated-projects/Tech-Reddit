@@ -39,7 +39,7 @@ body {
   font-size: 1.6rem;
   background-color: var(--grey-light-2);
   overflow-x: hidden;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
 }
 
 #root {

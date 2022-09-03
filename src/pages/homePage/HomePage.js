@@ -1,6 +1,6 @@
 import { React, useState } from "react";
 import Nav from "../../components/Nav";
-import Post from "../../components/post/Post";
+import PostCard from "../../components/post/PostCard";
 import DrawerGroup from "../../components/drawerGroup/DrawerGroup";
 
 import classes from "./HomePage.module.css";
@@ -16,14 +16,14 @@ const Homepage = (props) => {
   };
 
   const obj1 = {
-    text: "The substring() method returns the part of the string between the start and end indexes, or to the end of the string.The substring() method returns the part of the string between the start and end indexes, or to the end of the string.",
+    text: "The substring() method returns the part of the string between the start and end indexes, or to the end of the string.The substring() method returns the part of the string between the start and end indexes, or to the end of the string.The substring() method returns the part of the string between the start and end indexes, or to the end of the string.The substring() method returns the part of the string between the start and end indexes, or to the end of the string.The substring() method returns the part of the string between the start and end indexes, or to the end of the string.The substring() method returns the part of the string between the start and end indexes, or to the end of the string.The substring() method returns the part of the string between the start and end indexes, or to the end of the string.The substring() method returns the part of the string between the start and end indexes, or to the end of the string.The substring() method returns the part of the string between the start and end indexes, or to the end of the string.The substring() method returns the part of the string between the start and end indexes, or to the end of the string.",
     title: "Post Title2",
     date: "02-05-2000",
     like: true,
     community: "text",
   };
 
-  const [posts, setPosts] = useState([obj1, obj1, obj1, obj]);
+  const [posts, setPosts] = useState([obj1, obj, obj1, obj, obj1]);
 
   return (
     <div className={classes.home_container}>
@@ -32,7 +32,8 @@ const Homepage = (props) => {
       </div>
       <div className={classes.posts_container}>
         {posts.map((post) => (
-          <Post
+          <PostCard
+            type="small_post"
             key={post.id}
             id={post.id}
             text={post?.text}
