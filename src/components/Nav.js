@@ -26,14 +26,8 @@ const Nav = () => {
         />
       </form>
       <div className={classes.link_container}>
-        <Button title="Login" link="/auth" loginState = {true} className = {classes.login_bttn}/>
-        {/* <Link to="/auth" state={{ isLogin: true }}>
-          Login
-        </Link> */}
-        {/* <Link to="/auth" state={{ isLogin: false }}>
-          Sign Up
-        </Link> */}
-        <Button title="SignUp" link="/auth" loginState = {false} className = {classes.signup_bttn}/>
+        <Button title="Login" link="/auth" loginState = {true} classProp = "login_bttn"/>
+        <Button title="Sign Up" link="/auth" loginState = {false} classProp = "signup_bttn"/>
 
       </div>
     </div>

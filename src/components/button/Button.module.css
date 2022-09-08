@@ -1,0 +1,23 @@
+.button {
+  text-decoration: none;
+  border: solid black 1px;
+  padding: 10px 20px;
+  border-radius: 30px;
+}
+.login_bttn {
+  color: var(--reddit-red);
+  background: none;
+  border: var(--reddit-red) solid 0.3px;
+  margin-right: 10px;
+}
+.login_bttn:hover{
+background-color: var(--reddit-red-soft);
+}
+.signup_bttn {
+  background-color: var(--reddit-red-bright);
+  color: var(--grey-light-1);
+  border: none;
+}
+.signup_bttn:hover{
+    background-color: var(--reddit-red);
+}

@@ -15,7 +15,7 @@
 
 .nav_icon {
   object-fit: contain;
-  width: 50px;
+  width: 40px;
 }
 
 .search_container {
@@ -26,7 +26,7 @@
   background-color: var(--grey-light-3);
   border: solid var(--grey-light-4) 1px;
   border-radius: 5px;
-  height: 3rem;
+  height: 4rem;
   padding-right: 5px;
   margin-right: 20px;
 }
@@ -39,6 +39,8 @@
 .search_input {
   height: 100%;
   width: 100%;
+  font-size: 1.7rem;
+
   background: none;
   border: none;
 }
@@ -55,5 +57,7 @@
 }
 
 .link_container {
+  width: auto;
   margin-right: 20px;
+  display: flex;
 }
