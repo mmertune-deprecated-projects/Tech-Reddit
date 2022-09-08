@@ -1,8 +1,9 @@
 .button {
   text-decoration: none;
   border: solid black 1px;
-  padding: 10px 20px;
+  padding: 1rem 2rem;
   border-radius: 30px;
+  font-weight: 500;
 }
 .login_bttn {
   color: var(--reddit-red);
@@ -10,14 +11,14 @@
   border: var(--reddit-red) solid 0.3px;
   margin-right: 10px;
 }
-.login_bttn:hover{
-background-color: var(--reddit-red-soft);
+.login_bttn:hover {
+  background-color: var(--reddit-red-soft);
 }
 .signup_bttn {
   background-color: var(--reddit-red-bright);
   color: var(--grey-light-1);
   border: none;
 }
-.signup_bttn:hover{
-    background-color: var(--reddit-red);
+.signup_bttn:hover {
+  background-color: var(--reddit-red);
 }

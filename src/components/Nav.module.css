@@ -27,13 +27,14 @@
   border: solid var(--grey-light-4) 1px;
   border-radius: 5px;
   height: 4rem;
-  padding-right: 5px;
+  padding-right: 15px;
   margin-right: 20px;
 }
 
 .search_label {
   width: 30px;
   margin-left: 10px;
+  color: var(--grey-dark-4);
 }
 
 .search_input {
@@ -49,6 +50,14 @@
   outline: none;
 }
 
+.xmark{
+  color: var(--grey-light-4);
+}
+.xmark:hover{
+  cursor: pointer;
+  color: var(--grey-dark-4);
+
+}
 .search_container:hover,
 .search_container:focus-within {
   box-shadow: 0 0 0 1px hsla(220, 100%, 50%, 80%);
