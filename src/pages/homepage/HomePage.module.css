@@ -6,12 +6,12 @@
     "nav nav"
     "posts side";
   grid-template-columns: 1fr 28rem;
-  grid-template-rows: 10rem 1fr;
+  grid-template-rows: 6rem 1fr;
 }
 
 .nav_container {
   grid-area: nav;
-  background-color: green;
+  background-color: var(--grey-light-1);
 }
 
 .posts_container {
